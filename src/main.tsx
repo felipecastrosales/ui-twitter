@@ -39,6 +39,10 @@ createRoot(document.getElementById('root')!).render(
       <Tweet user="test2">
           hello
       </Tweet>
+
+      <Tweet user="test2" likes={10}>
+          hello
+      </Tweet>
     </div>
   </StrictMode>,
 )
