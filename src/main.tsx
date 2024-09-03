@@ -64,8 +64,8 @@ createRoot(document.getElementById('root')!).render(
             <label htmlFor="tweet">
               <img src="https://avatars.githubusercontent.com/u/59374587?v=4" alt="Avatar" />
               <textarea id="tweet" placeholder="What's happening?" />
-              <button type="submit">Tweet</button>
             </label>
+              <button type="submit">Tweet</button>
           </form>
         </main>
       </div>
