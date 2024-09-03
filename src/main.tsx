@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Tweet } from './components/Tweet'
-import { Bell, BookmarkSimple, DotsThree, DotsThreeCircle, Envelope, FileText, Hash, House, User } from 'phosphor-react'
+import { Bell, BookmarkSimple, DotsThree, DotsThreeCircle, Envelope, FileText, Hash, House, Sparkle, User } from 'phosphor-react'
 
 import './global.css';
 
@@ -54,7 +54,20 @@ createRoot(document.getElementById('root')!).render(
         </button>
       </aside>
       <div className="content">
-        content
+        <main className="timeline">
+          <div className="timeline-header">
+            Home
+            <Sparkle />
+          </div>
+
+          <form className="new-tweet-form">
+            <label htmlFor="tweet">
+              <img src="https://avatars.githubusercontent.com/u/59374587?v=4" alt="Avatar" />
+              <textarea id="tweet" placeholder="What's happening?" />
+              <button type="submit">Tweet</button>
+            </label>
+          </form>
+        </main>
       </div>
     </div>
   </StrictMode>,
