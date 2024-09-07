@@ -5,6 +5,8 @@ import { Sparkle } from 'phosphor-react'
 
 import './global.css';
 import { Sidebar } from './components/Sidebar';
+import { Header } from './components/Header';
+import { Separator } from './components/Separator';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,10 +15,7 @@ createRoot(document.getElementById('root')!).render(
 
       <div className="content">
         <main className="timeline">
-          <div className="timeline-header">
-            Home
-            <Sparkle />
-          </div>
+          <Header title={'Home'} />
 
           <form className="new-tweet-form">
             <label htmlFor="tweet">
@@ -26,7 +25,7 @@ createRoot(document.getElementById('root')!).render(
               <button type="submit">Tweet</button>
           </form>
 
-          <div className="separator" />
+          <Separator />
 
           <Tweet />
           <Tweet />
