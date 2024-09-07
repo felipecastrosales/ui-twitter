@@ -8,6 +8,12 @@ import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
 import { Separator } from './components/Separator';
 
+const tweets = [
+  'Hello, World!',
+  'This is a tweet!',
+  'This is another tweet!',
+];
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <div className="layout">
@@ -27,9 +33,15 @@ createRoot(document.getElementById('root')!).render(
 
           <Separator />
 
-          <Tweet />
-          <Tweet />
-          <Tweet />
+          {/* <Tweet content={tweets[0]} />
+          <Tweet content={tweets[1]} />
+          <Tweet content={tweets[2]} /> */}
+
+          {
+            tweets.map((tweet, index) => (
+              <Tweet key={index} content={tweet} />
+            ))
+          }
         </main>
       </div>
     </div>

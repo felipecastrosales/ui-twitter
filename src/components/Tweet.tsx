@@ -1,7 +1,13 @@
 import { ArrowsClockwise, ChatCircle, Heart } from 'phosphor-react';
 import './Tweet.css';
 
-export function Tweet() {
+interface TweetProps {
+  content: string;
+}
+
+export function Tweet(
+  props: TweetProps,
+) {
   return (
     <a href='#' className="tweet">
       <img src="https://github.com/felipecastrosales.png" alt="Felipe Castro Sales" />
@@ -13,11 +19,12 @@ export function Tweet() {
           <time>1h</time>
         </div>
 
-          <p>
+          {/* <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             <br />
             <a href="#">#javascript</a> <a href="#">#react</a>
-          </p>
+          </p> */}
+          <p>{props.content}</p>
 
         <div className="tweet-content-footer">
           <button type="button">
