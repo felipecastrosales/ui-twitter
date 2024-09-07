@@ -1,30 +1,41 @@
-interface TweetProps {
-  user: string;
-  children: string;
-  likes?: number;
-}
+import { ArrowsClockwise, ChatCircle, Heart } from 'phosphor-react';
+import './Tweet.css';
 
-const tweetStyles = {
-  backgroundColor: 'black',
-  borderRadius: 8
-};
-
-// export function Tweet(props) {
-export function Tweet(props: TweetProps) {
-  // console.log(props)
+export function Tweet() {
   return (
-    // <div className="tweet">
-    <div className="tweet" style={{ backgroundColor: 'black', borderRadius: 8 }}>
-    {/* <div className="tweet" style={tweetStyles}> */}
-      {/* {props.user} */}
-      <strong>{props.user}</strong>
-      {/* <p>{props.content}</p> */}
-      <p>{props.children}</p>
-      <button>likes {props.likes ?? 0}</button>
-      {/* <h1> */}
-          {/* Tweet */}
-          {/* <button onClick={() => console.log('clicked')}>Click me</button> */}
-      {/* </h1> */}
-    </div>
+    <a href='#' className="tweet">
+      <img src="https://github.com/felipecastrosales.png" alt="Felipe Castro Sales" />
+
+      <div className="tweet-content">
+        <div className="tweet-content-header">
+          <strong>Felipe Castro Sales</strong>
+          <span>@felipecastrosales</span>
+          <time>1h</time>
+        </div>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <br />
+            <a href="#">#javascript</a> <a href="#">#react</a>
+          </p>
+
+        <div className="tweet-content-footer">
+          <button type="button">
+            <ChatCircle />
+            3
+          </button>
+
+          <button type="button">
+            <ArrowsClockwise />
+            5
+          </button>
+
+          <button type="button">
+            <Heart />
+            10
+          </button>
+        </div>
+      </div>
+    </a>
   );
 }
