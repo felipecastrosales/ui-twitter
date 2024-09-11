@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Timeline } from "./pages/Timeline";
+import { Status } from "./pages/Status";
 
 // localhost:3000/
 
@@ -9,7 +10,7 @@ export const router = createBrowserRouter([
     element: <Timeline />,
   },
   {
-    path: "/explore",
-    element: <h3>Explore</h3>,
+    path: "/status",
+    element: <Status />,
   },
 ]);
