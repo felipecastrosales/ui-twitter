@@ -19,7 +19,7 @@ export function Timeline() {
     const tweet = newTweet
     tweets.push(tweet)
 
-    setTweets([...tweets])
+    setTweets([newTweet, ...tweets])
     setNewTweet('')
 
     console.log('New tweet:', tweet)
