@@ -4,6 +4,7 @@ import { Separator } from "../components/Separator";
 import { Tweet } from "../components/Tweet";
 
 import './Status.css';
+import { PaperPlaneRight } from "phosphor-react";
 
 export function Status() {
   const [newAnswer, setNewAnswer] = useState('')
@@ -41,7 +42,6 @@ export function Status() {
 
     <Separator />
 
-    {/* <form className="answer-tweet-form"> */}
     <form 
       onSubmit={createNewAnswer}
       className="answer-tweet-form"
@@ -58,7 +58,10 @@ export function Status() {
           }}
         />
       </label>
-        <button type="submit">Answer</button>
+        <button type="submit">
+          <PaperPlaneRight size={24} />
+          <span>Answer</span>
+        </button>
     </form>
 
 
