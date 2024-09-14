@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, KeyboardEvent, useState } from "react";
 import { Header } from "../components/Header";
 import { Separator } from "../components/Separator";
 import { Tweet } from "../components/Tweet";
@@ -26,6 +26,13 @@ export function Status() {
     console.log('Tweets:', answers)
   }
 
+  function handleKeyDown(event: KeyboardEvent) {
+    if (event.key === 'Enter' && (event.metaKey || event.ctrlKey)) {
+      setAnswers([newAnswer, ...answers])
+      setNewAnswer('')
+    }
+  }
+
   return (
     <main className="status">
     <Header title={'Tweet'} />
@@ -45,6 +52,7 @@ export function Status() {
           id="tweet"
           placeholder="Tweet your answer"
           value={newAnswer}
+          onKeyDown={handleKeyDown}
           onChange={(event) => {
             setNewAnswer(event.target.value)
           }}
