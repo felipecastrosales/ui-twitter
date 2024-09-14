@@ -5,9 +5,8 @@ import { Tweet } from "../components/Tweet";
 
 import './Timeline.css';
 
-let newTweet = '';
-
 export function Timeline() {
+  const [newTweet, setNewTweet] = useState('')
   const [tweets, setTweets] = useState([
     'Hello, World!',
     'This is a tweet!',
@@ -15,15 +14,13 @@ export function Timeline() {
   ])
 
   function createNewTweet(event: FormEvent) {
-    // console.log('Creating new tweet... 🐦 | event', event)
-    // console.log(event)
     event.preventDefault()
 
     const tweet = newTweet
-
     tweets.push(tweet)
 
     setTweets([...tweets])
+    setNewTweet('')
 
     console.log('New tweet:', tweet)
     console.log('Tweets:', tweets)
@@ -39,9 +36,9 @@ export function Timeline() {
         <textarea
           id="tweet"
           placeholder="What's happening?"
+          value={newTweet}
           onChange={(event) => {
-            // console.log('Creating new tweet... 🐦 | event', event)
-            newTweet = event.target.value
+            setNewTweet(event.target.value)
           }}
         />
       </label>
