@@ -20,12 +20,7 @@ export function Tweet(
           <time>1h</time>
         </div>
 
-          {/* <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            <br />
-            <a href="#">#javascript</a> <a href="#">#react</a>
-          </p> */}
-          <p>{props.content}</p>
+        <p>{props.content}</p>
 
         <div className="tweet-content-footer">
           <button type="button">
