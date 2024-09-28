@@ -5,7 +5,7 @@ This project is a Twitter UI clone built with React, TypeScript, and Vite. It ai
 # Figma Design
 You can view the design layout for this project on Figma:
 
-Twitter UI Clone - Figma Design
+[Twitter UI Clone - Figma Design](https://www.figma.com/community/file/1202694130789327431)
 
 ## Features
 
