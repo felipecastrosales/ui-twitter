@@ -2,6 +2,11 @@
 
 This project is a Twitter UI clone built with React, TypeScript, and Vite. It aims to replicate some of the core features and design elements of Twitter's user interface.
 
+# Figma Design
+You can view the design layout for this project on Figma:
+
+Twitter UI Clone - Figma Design
+
 ## Features
 
 - Home timeline
@@ -11,7 +16,7 @@ This project is a Twitter UI clone built with React, TypeScript, and Vite. It ai
 
 ## Technologies Used
 
-- React 18
+- React 18.3.1
 - TypeScript
 - Vite
 - React Router
@@ -298,10 +303,3 @@ export const router = createBrowserRouter([
 
 This project uses ESLint for code quality and TypeScript for type checking. The configuration can be found in the `eslint.config.js` and `tsconfig.json` files.
 
-## License
-
-This project is open-source and available under the MIT License.
-
----
-
-This README provides an overview of the Twitter UI clone project, highlighting its main features, technologies used, and project structure. It also includes instructions for getting started and running the project locally.
